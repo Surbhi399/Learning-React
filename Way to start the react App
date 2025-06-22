@@ -1,0 +1,74 @@
+import {createRoot} from "react-dom/client"
+const root = createRoot(document.getElementById("root"))
+root.render(<p>Hi this is a react world</p>)
+
+=============================================================================
+
+
+import {createRoot} from "react-dom/client"
+const root = createRoot(document.querySelector("#root"))
+root.render(<p>Hi this is a react world</p>)
+
+==============================================================================
+
+import ReactDom from "react-dom/client"
+import React from "react";
+import ReactDOM from "react-dom";
+ReactDOM.render(<App />, document.getElementById("root"));
+
+======================================================================
+A very simple explanation of the line:
+
+import { createRoot } from "react-dom/client";
+const root = createRoot(document.getElementById("root"));
+root.render(<h1>heloo</h1>);
+
+🧠 What does this code do? (Simple Explanation)
+This code is used to start a React app and show something on the screen (like a heading or component).
+🔹 Step-by-step Explanation:
+
+✅ 1. import { createRoot } from "react-dom/client";
+👉 This means:
+"Hey React, I want to use the tool called createRoot from your toolbox."
+We use createRoot to tell React:
+“Get ready to show things on the web page.”
+
+✅ 2. document.getElementById("root")
+👉 This finds the place in your HTML page where React should put the content.
+Usually, your index.html has this:
+<div id="root"></div>
+This is the empty box where React will draw everything.
+
+✅ 3. const root = createRoot(document.getElementById("root"));
+👉 This means:
+"Create a connection between React and the HTML box with id 'root'."
+Now, React knows where to show things.
+
+✅ 4. root.render(<h1>heloo</h1>);
+👉 This means:
+"Please show this heading: heloo inside the root box."
+So, when the page loads, it will show a big bold heading:
+heloo
+
+🎯 Full Simple Example:
+🧾 HTML (index.html):
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My React App</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="main.js"></script>
+  </body>
+</html>
+💻 JavaScript (main.js):
+import React from "react";
+import { createRoot } from "react-dom/client";
+const root = createRoot(document.getElementById("root"));
+root.render(<h1>Hello from React!</h1>);
+
+✅ In Interview, Say Like This:
+	In React 18, we use createRoot from react-dom/client to start the app.
+	It connects React with the HTML div using document.getElementById("root").
+	Then we use root.render() to show something like a heading or a component.
