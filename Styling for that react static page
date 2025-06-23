@@ -5,19 +5,23 @@
 
 body {
     padding: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: #27292c;
     color: white;
 }
 
 h1 {
     margin-top: 30px;
+    color: #61dafb;
+  font-size: 2rem;
+
 }
 
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #282c34;
 }
 
 .nav-list {
@@ -29,8 +33,22 @@ h1 {
     margin-left: 10px;
     font-size: 1.1rem;
 }
-.logo{
+
+.nav-logo {
     width: 55px;
+}
+main {
+  padding: 40px;
+  background-color: #20232a;
+  border-radius: 10px;
+  margin: 20px;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  font-size: 0.9rem;
+  color: #aaa;
 }
 ------------------------------------------------------------------------------------JSX FILE----------------------------------------------------------------------------------
 
