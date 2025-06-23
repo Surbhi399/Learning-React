@@ -9,9 +9,10 @@ const root = createRoot(document.getElementById("root"))
  * Then render an instance of the Header component inside
  * the Page component where the `header` used to be.
  */
-function Header(){<header>
+function Header(){
+return(<header>
                 <img src="react-logo.png" width="40px" alt="React logo" />
-            </header>}
+            </header>)}
 
 function Page() {
     return (
