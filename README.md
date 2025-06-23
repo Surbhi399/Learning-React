@@ -11,7 +11,8 @@ Learning react with projects.
 Preview of static page of react using CSS for this
 
 
-![image](https://github.com/user-attachments/assets/b080bc89-3ce0-463b-9da4-2927633d6f28)
+![image](https://github.com/user-attachments/assets/73e182bb-7b43-4823-b8d5-19ea887c5dc3)
+
 
 
 
