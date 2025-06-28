@@ -13,6 +13,9 @@ Preview of static page of react using CSS for this
 
 ![image](https://github.com/user-attachments/assets/73e182bb-7b43-4823-b8d5-19ea887c5dc3)
 
+![image](https://github.com/user-attachments/assets/223ccbb2-e6b9-48b9-b680-2fe222122080)
+
+
 
 
 
