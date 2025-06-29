@@ -5,14 +5,14 @@
 body {
     margin: 0;
      background-color: #33313B;
-       background-image: url("https://media.licdn.com/dms/image/v2/C5112AQH61XE_l7qNKQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1586309275918?e=2147483647&v=beta&t=i6qA_luMs4Ilh6AzLS8mUlkV626XywGlAEv3isWl1Qs") ;
+     background-image: url("https://media.licdn.com/dms/image/v2/C5112AQH61XE_l7qNKQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1586309275918?e=2147483647&v=beta&t=i6qA_luMs4Ilh6AzLS8mUlkV626XywGlAEv3isWl1Qs") ;
       background-repeat: no-repeat;
       background-size: cover;
-
+      font-family: Inter, sans-serif;
       
 }
 main{
-    
+     padding: 60px 30px;
 }
 
 nav{
@@ -37,7 +37,7 @@ nav{
 }
 .heading{
     color: white;
-    margin: 50px 50px 30px 30px;
+   margin: 0;
     
 }
 .Facts-List-Item{
