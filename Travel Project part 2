@@ -1,0 +1,35 @@
+import Header from "./components/Header"
+import Entry from "./components/Entry"
+import data from "/data.js"
+
+/**
+ * Challenge:
+ * - import the array of data from data.js
+ * - map over the array to create an <Entry /> component
+ *   for every item in the data array.
+ * - display the array of Entry components in place of the current
+ *   hard-coded <Entry /> instance.
+ */
+const dataElements = data.map((value) => {
+        return <Entry 
+        key = {value.id}
+        img = {value.img}
+        title= {value.title}
+        country = {value.country}
+        googleMapsLink = {value.googleMapsLink}
+        dates = {value.dates}
+        text = {value.text}
+        
+        
+         />
+    })
+export default function App() {
+    return (
+        <>
+            <Header />
+            <main className="container">
+            {dataElements}    
+            </main>
+        </>
+    )
+}
