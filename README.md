@@ -15,6 +15,9 @@ Preview of static page of react using CSS for this
 
 ![image](https://github.com/user-attachments/assets/223ccbb2-e6b9-48b9-b680-2fe222122080)
 
+<img width="1252" height="557" alt="image" src="https://github.com/user-attachments/assets/58111902-8db9-412d-a6a0-d49af293445b" />
+
+
 
 
 
