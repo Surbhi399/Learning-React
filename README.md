@@ -18,6 +18,8 @@ Preview of static page of react using CSS for this
 <img width="1252" height="557" alt="image" src="https://github.com/user-attachments/assets/58111902-8db9-412d-a6a0-d49af293445b" />
 
 <img width="1230" height="630" alt="image" src="https://github.com/user-attachments/assets/e5847fd6-cb9f-4b89-972f-3c0017fecbbd" />
+<img width="1236" height="577" alt="image" src="https://github.com/user-attachments/assets/5f03b852-e664-48a9-a709-8c113c1385ee" />
+
 
 
 
