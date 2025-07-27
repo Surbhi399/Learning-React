@@ -1,0 +1,29 @@
+export default function Main() {
+    const ingredients = ["Chicken", "Oregano", "Tomatoes"]
+    
+    const ingredientsListItems = ingredients.map(ingredient => (
+        <li key={ingredient}>{ingredient}</li> // key is used so that the unique value got inserted in the ingredient list
+    ))
+
+    function handleSubmit(event) {
+        event.preventDefault() // to handle the defualt event while refresh
+        console.log("Form submitted!")
+    }
+    
+    return (
+        <main>
+            <form onSubmit={handleSubmit} className="add-ingredient-form"> 
+                <input 
+                    type="text"
+                    placeholder="e.g. oregano"
+                    aria-label="Add ingredient"
+                    name="ingredient"   // so that default ? will replace with if we enter ketchup it will show in url ingredent = ketchup
+                />
+                <button>Add ingredient</button>
+            </form>
+            <ul>
+                {ingredientsListItems}
+            </ul>
+        </main>
+    )
+}
