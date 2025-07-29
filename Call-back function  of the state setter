@@ -1,0 +1,106 @@
+ Simple way to explain in interview:
+I use a function form of the state setter — like setCount(prev => prev + 1) — when I need the old value of state to calculate the new one. This ensures that React always uses the latest state value, even when updates are batched. It’s like telling React, “Whatever the current value is, just add one more to it.”
+
+------------------------------------------------------------------------------------------------------------------------
+
+### 🎯 **What is the problem this solves?**
+
+Sometimes, when you update state in React **multiple times quickly**, React **batches** the updates to make performance better.
+
+If you try to **directly use the state variable** to calculate the new value, it might be **outdated** by the time the update happens.
+
+---
+
+### 🧠 **So what’s the solution?**
+
+Use a **function inside your setter**, like this:
+
+```js
+setCount(prevCount => prevCount + 1)
+```
+
+This guarantees that you're using the **most recent value** of the state — even if React batches updates.
+
+---
+
+### ✅ **Why it’s better than this:**
+
+```js
+setCount(count + 1)
+```
+
+This version **uses the current value of `count` at the time**, which may already be **stale** if multiple updates happen.
+
+---
+
+### 🧪 Example to explain in interview:
+
+Imagine this counter code:
+
+```js
+setCount(count + 1)
+setCount(count + 1)
+```
+
+You **expect count to increase by 2**, right?
+
+But if `count` is 0, both lines read `count` as 0 and set it to 1 — so you end up with `1`, **not 2**.
+
+---
+
+✅ But this works perfectly:
+
+```js
+setCount(prev => prev + 1)
+setCount(prev => prev + 1)
+```
+
+Because:
+
+* First line: `prev = 0` → becomes `1`
+* Second line: `prev = 1` → becomes `2`
+
+---
+
+### 🗣️ How to explain this in interview:
+
+> In React, state updates can be asynchronous and batched for performance. So, if my new state depends on the old state, I don’t use the current variable directly. Instead, I pass a function to the state setter — like `setCount(prev => prev + 1)` — which ensures that I’m always working with the most up-to-date value, even if multiple updates happen in a row.
+
+---
+
+Would you like a small demo or visual analogy for this too?
+
+---------------------------------------------------------------------Example--------------------------------------------------------------------------------
+import React from "react"
+
+export default function App() {
+    const [count, setCount] = React.useState(0)
+    /**
+     * Note: if you ever need the old value of state
+     * to help you determine the new value of state,
+     * you should pass a callback function to your
+     * state setter function instead of using
+     * state directly. This callback function will
+     * receive the old value of state as its parameter,
+     * which you can then use to determine your new
+     * value of state.
+     */
+    function add() {
+        setCount(prevCount=> prevCount + 1)   // Call back function
+    }
+
+    function subtract() {
+        setCount(prevCount=> prevCount -1)     // Callback Function
+    }
+
+    return (
+        <main className="container">
+            <h1>How many times will Bob say "state" in this section?</h1>
+            <div className="counter">
+                <button className="minus" onClick={subtract} aria-label="Decrease count">–</button>
+                <h2 className="count">{count}</h2>
+                <button className="plus" onClick={add} aria-label="Increase count">+</button>
+            </div>
+        </main>
+    )
+}
