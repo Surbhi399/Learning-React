@@ -70,15 +70,13 @@ export default function App() {
     let starIcon = contact.isFavorite ? starFilled : starEmpty
 
     function toggleFavorite() {
-        // Challenge: re-write it :)
-        setContact(prevContact =>
-        {
-            return {
-            ... prevContact, isFavorite : !prevContact.isFavorite 
-            
-                   }
-       }
-            )
+
+
+       setContact(prevContact => ({...prevContact, isFavorite : ! prevContact.isFavorite}))
+
+                         OR
+
+        setContact(prevContact =>{ return {... prevContact, isFavorite : !prevContact.isFavorite } } )
     }
 
     return (
